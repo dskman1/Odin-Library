@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    border: 0;
+    background-color: antiquewhite;
+}
+
+#dialog{
+    padding: 0;
+    border: none;
+    height: 400px;
+    width: 300px;
+    background-color: wheat;
+    border-radius: 15px;
+       
+}
+
+
+#dialog::backdrop{
+    background-color: hsl(0 0% 0% / .5);
+    backdrop-filter: blur(2px);
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.addButton{
+    height: 50px;
+    width: 90px;
+    border-radius: 15px;
+    border: 0;
+    background-color: rebeccapurple;
+    color: white;
+    
+}
+
+.addButton:hover{
+    background-color: rgb(179, 122, 230);
+}
+
+h1{
+    font-size: 45px;
+}
+
+#myform{
+    display: grid;
+    gap: 10px;
+    border: 0;
+    padding: 14px;
+    font-weight: 600;
+    
+}
+.form-group input{
+    border-radius: 20px;
+    border: 0;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.checkBox{
+    display: grid;
+    padding: 5px;
+    grid-template-columns: 3fr 1fr;
+}
+
+.form-group {
+    display: grid;
+    row-gap: 5px;
+    
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 9px;
+    row-gap: 9px;
+}
+
+.button:hover{
+    background-color: black;
+    color: white;
+}
+
+.cancel-btn{
+    grid-column: 1/-1;
+}
+
+.button{
+    border-radius: 20px;
+    border: none;
+    padding: 9px;
+}
+
+#alertMassage{
+    margin: 0;
+    margin-top: 2px;
+    text-align: center;
+    border-top: 2px solid gray ;
+    padding-top: 15px;
+    font-weight: 900;
+    font-size: 17px;
+    border-radius: 15px;
+}
+
+.books{
+    margin-top: 30px;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+
+}
+
+.book-card{
+    border-radius: 15px;
+    background-color: rgb(199, 199, 144);
+    padding: 20px;
+}
+
+.book-card p{
+    overflow: break-word;
+    word-break: break-all;
+    white-space: normal;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', sans-serif;
+    border: 1px solid rgb(208, 214, 202);
+    border-radius: 20px;
+    padding: 10px;
+    color: rgb(121, 103, 103);
+}
+
+.book-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.delete-btn, .is-green, .is-red{
+    border-radius: 20px ;
+    border: none;
+    padding: 5px;
+    color: white;
+    height: 40px;
+}
+
+.delete-btn{
+    background-color: rgb(82, 32, 32);
+}
+
+.delete-btn:hover{
+    background-color: rgb(160, 93, 93);
+}
+
+.is-green:hover {
+    background-color: rgb(51, 150, 12) !important; 
+}
+
+.is-red:hover{
+    background-color: red !important ;
+}
+

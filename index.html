@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
+    <title>Library</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Library</h1>
+             <button class="addButton" id="open-dialog">Add Book </button>
+        </div>
+        <div class="dialog-container">
+            <dialog id="dialog">
+                <form id="myform" >
+                     <div class="form-group">
+                         <label for="title">Title</label>
+                         <input type="text" id="title" name="title" maxlength="50" required>
+                     </div>
+
+                     <div class="form-group">
+                         <label for="author">Author</label>
+                         <input type="text" id="author" name="author" maxlength="35" required>
+                     </div>
+
+                     <div class="form-group">
+                         <label for="num-input">Pages</label>
+                         <input type="number" id="num-input" name="numPages" min="1" required>
+                     </div>
+
+                     <div class="form-group checkBox">
+                         <label for="isread">Read</label>
+                         <input type="checkbox" id="isread" name="isRead" class="read-checkBox">
+                     </div>
+
+                     <div class="btns">
+                         <button type="submit" class="submit-btn button">Submit</button>
+                         <button type="reset" class="reset-btn button" >Reset</button>
+                         <button type="button" class="cancel-btn button" id="close-dialog">Close</button>
+                     </div>
+                 </form>
+                    <p id="alertMassage"> </p>
+            </dialog>
+        </div>
+        <div class="books"></div>
+    </div>
+    
+    
+</body>
+</html>
