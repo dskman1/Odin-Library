@@ -56,16 +56,6 @@ form.addEventListener("submit", (e) => {
     dialog.close();
 });
 
-function changeButtonColorHover(button){
-    if(button.textContent.trim() === "Read"){
-        button.style.backgroundColor = "red"
-        button.className = ("is-green");
-    }else{
-        button.style.backgroundColor = "green"
-        button.className = ("is-red");
-    }
-}
-
 
 function checkBookInside(title){
     alertBookIn.textContent = "";
@@ -130,6 +120,7 @@ function BookCard(book){
 
     bookCard.classList.add("book-card")
     btnContainer.classList.add("book-buttons")
+    readBtn.classList.add("isRead-btn")
     deleteBookBtn.classList.add("delete-btn")
 
     bookCard.dataset.id = book.id;
@@ -144,14 +135,22 @@ function BookCard(book){
         btnContainer
     );
 
+     if(book.isRead == true){
+            readBtn.style.backgroundColor = "green"
+        }else{
+            readBtn.style.backgroundColor = "red"
+        }
 
-    // to set the first color and indicate what is the next color  
-    changeButtonColorHover(readBtn);
+     
+
+
 
     readBtn.addEventListener("click", () =>{ 
-     
-        // to indicate what is the next color and set the backGround for each click
-        changeButtonColorHover(readBtn);
+        if(book.isRead == true){
+            readBtn.style.backgroundColor = "red"
+        }else{
+            readBtn.style.backgroundColor = "green"
+        }
 
         book.toggleRead();
         readBtn.textContent = book.isRead ? "Read": "Not Read";

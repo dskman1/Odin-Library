@@ -142,7 +142,7 @@ h1{
     gap: 15px;
 }
 
-.delete-btn, .is-green, .is-red{
+.delete-btn, .isRead-btn{
     border-radius: 20px ;
     border: none;
     padding: 5px;
@@ -158,11 +158,7 @@ h1{
     background-color: rgb(160, 93, 93);
 }
 
-.is-green:hover {
-    background-color: rgb(51, 150, 12) !important; 
+.isRead-btn:hover {
+    background-color: gainsboro !important ; 
+    color: rebeccapurple;
 }
-
-.is-red:hover{
-    background-color: red !important ;
-}
-
