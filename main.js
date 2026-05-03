@@ -53,9 +53,7 @@ form.addEventListener("submit", (e) => {
     );
 
     form.reset();  
-    dialog.close();
 });
-
 
 function checkBookInside(title){
     alertBookIn.textContent = "";
@@ -71,23 +69,21 @@ function checkBookInside(title){
     return true;
 };
 
-
-function displayBookIsAdded(){
-return alertBookIn.textContent = "Book Is Already Added";
-};
-
+const displayBookIsAdded = () => alertBookIn.textContent = "Book Is Already Added";
 const checkRead = bookState => bookState === true  ? "Read" : "Not Read";
 
-function Book(title, author, numPages, isRead){
-    this.title = title;
-    this.author = author;
-    this.numPages = numPages;
-    this.isRead = isRead;
-    this.id = crypto.randomUUID();
-}
+class Book{
+    constructor(title, author, numPages, isRead){
+        this.title = title;
+        this.author = author;
+        this.numPages = numPages;
+        this.isRead = isRead;
+        this.id = crypto.randomUUID();
+    }
 
-Book.prototype.toggleRead = function(){
-    this.isRead = !this.isRead
+    toggleRead(){
+        this.isRead = !this.isRead
+    }
 }
 
 function makeNewBook(title, author, numPages, isRead ){
@@ -140,10 +136,6 @@ function BookCard(book){
         }else{
             readBtn.style.backgroundColor = "red"
         }
-
-     
-
-
 
     readBtn.addEventListener("click", () =>{ 
         if(book.isRead == true){
